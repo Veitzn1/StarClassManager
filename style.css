@@ -1,0 +1,370 @@
+/* style.css */
+/* 全局样式 */
+body {
+    font-family: 'Inter', sans-serif;
+    background: linear-gradient(135deg, #e6f7ff 0%, #f2f9ff 100%);
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* 容器样式 */
+.container {
+    padding: 1.5rem;
+    max-width: 1280px;
+    background: white;
+    border-radius: 24px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05), 0 6px 6px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(180deg, #ffffff 0%, #f9faff 100%);
+    margin: 2rem auto;
+    width: 90%;
+}
+
+/* 响应式容器 */
+@media (max-width: 768px) {
+    .container {
+        border-radius: 16px;
+        padding: 1rem;
+    }
+}
+
+/* 卡片样式 */
+.card {
+    background: linear-gradient(180deg, #ffffff 0%, #fcfdff 100%);
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #e0e7ff;
+    border-radius: 12px;
+    padding: 1.2rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.2s;
+
+}
+.card:hover {
+    transform: scale(1.01);
+}
+
+/* 移动端卡片适配 */
+@media (max-width: 600px) {
+    .card {
+        padding: 1rem;
+    }
+}
+
+/* 按钮样式 */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    overflow: hidden;
+    cursor: pointer;
+    z-index: 1;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    font-size: 0.9rem;
+    margin: 0.5rem 0;
+}
+
+/* 移动端按钮优化 */
+@media (max-width: 768px) {
+    .btn {
+        padding: 1rem 2.5rem;
+        font-size: 1rem;
+    }
+}
+
+/* 表单组样式 */
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #e0e7ff;
+    border-radius: 6px;
+    background-color: #fafafa;
+    transition: border-color 0.2s;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #4a90e2;
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+/* 移动端表单优化 */
+@media (max-width: 600px) {
+    .form-group input,
+    .form-group select {
+        font-size: 1rem;
+        padding: 0.9rem 1.5rem;
+    }
+}
+
+/* 表格样式 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.9rem;
+}
+th, td {
+    padding: 0.7rem;
+    text-align: left;
+    vertical-align: top;
+    white-space: nowrap;
+}
+th {
+    background-image: linear-gradient(180deg, #f0f8ff 0%, #e6f7ff 100%);
+    color: #2563eb;
+    font-weight: 500;
+}
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+tr:hover {
+    background-image: linear-gradient(180deg, #f0f8ff 0%, #e6f7ff 10%);
+}
+
+/* 移动端表格优化 */
+@media (max-width: 768px) {
+    table {
+        font-size: 0.85rem;
+    }
+    th, td {
+        padding: 0.6rem;
+    }
+}
+
+/* 年级标签样式 */
+.grade-tab {
+    padding: 0.6rem 1.5rem;
+    background: #e0f2fe;
+    color: #2563eb;
+    border-radius: 8px;
+    margin-right: 0.8rem;
+    transition: all 0.3s;
+    cursor: pointer;
+    font-size: 0.9rem;
+}
+
+/* 移动端标签优化 */
+@media (max-width: 600px) {
+    .grade-tab {
+        font-size: 0.85rem;
+        padding: 0.5rem 1.2rem;
+    }
+}
+
+/* 特殊按钮样式（编辑按钮） */
+#editButton {
+    display: block;
+    padding: 1rem 2rem;
+    border: 1px solid #018dc4;
+    border-radius: 12px;
+    font: normal 16px "Times New Roman", Times, serif;
+    color: white;
+    background: linear-gradient(45deg, #1075ef, #5e87f2);
+    box-shadow: 0 4px 8px rgba(16, 117, 239, 0.4);
+    text-shadow: -1px -1px 0 rgba(15, 73, 168, 0.66);
+    transition: all 0.3s cubic-bezier(0.42, 0, 0.58, 1);
+    margin-top: 1rem;
+}
+
+/* 移动端按钮适配 */
+@media (max-width: 768px) {
+    #editButton {
+        font-size: 1rem;
+    }
+}
+
+/* 表单背景样式 */
+#yearSelection,
+#classSetupForm,
+#deductionRegistration,
+#deductionResult {
+    padding: 1.5rem;
+    border-radius: 16px;
+    margin-bottom: 1.5rem;
+}
+#yearSelection {
+    background-image: linear-gradient(120deg, #e0f7fa 0%, #b2ebf2 100%);
+}
+#classSetupForm {
+    background-image: linear-gradient(120deg, #f1f8e9 0%, #dcedc8 100%);
+}
+#deductionRegistration {
+    background-image: linear-gradient(120deg, #fffde7 0%, #fff9c4 100%);
+}
+#deductionResult {
+    background-image: linear-gradient(120deg, #ede7f6 0%, #d1c4e9 100%);
+}
+
+/* 移动端表单间距 */
+@media (max-width: 600px) {
+    #yearSelection,
+    #classSetupForm,
+    #deductionRegistration,
+    #deductionResult {
+        padding: 1.2rem;
+    }
+}
+
+/* 通知样式 */
+.warning-message,
+.error-message {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-left: 4px solid;
+}
+.warning-message {
+    background-image: linear-gradient(135deg, #fffbeb 0%, #fff7ed 100%);
+    border-color: #ffec99;
+    color: #d39e00;
+}
+.error-message {
+    background-image: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+    border-color: #ff5733;
+    color: #a94442;
+}
+
+/* 移动端通知优化 */
+@media (max-width: 768px) {
+    .warning-message,
+    .error-message {
+        padding: 0.8rem;
+        font-size: 0.9rem;
+    }
+}
+
+/* 标题样式 */
+h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    background: -webkit-linear-gradient(#2563eb, #0891b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 移动端标题适配 */
+@media (max-width: 600px) {
+    h2 {
+        font-size: 1.3rem;
+    }
+}
+
+/* 动态效果增强 */
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.5);
+}
+.grade-tab:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.15);
+}
+
+/* 额外移动端适配 */
+@media (max-width: 768px) {
+    /* 输入框全屏显示 */
+    .form-group input,
+    .form-group select {
+        width: 100%;
+    }
+
+    /* 标签堆叠显示 */
+    .grade-tab {
+        display: block;
+        margin: 0.3rem 0;
+    }
+    
+    /* 表格响应式布局 */
+    table {
+        font-size: 0.8rem;
+    }
+    th, td {
+        padding: 0.5rem;
+    }
+    
+    /* 容器内边距 */
+    .container {
+        padding: 1rem;
+    }
+}
+
+/* 触控优化 */
+button, .btn {
+    min-width: 88px;
+    min-height: 44px;
+    touch-action: manipulation;
+}
+/* 新增班级数量表单优化 */
+.grade-inputs {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.grade-inputs .form-group {
+    flex: 0 0 calc(16.666% - 0.5rem);
+    min-width: 120px;
+}
+
+.grade-inputs label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.grade-inputs input {
+    width: 50%;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .grade-inputs .form-group {
+        flex: 0 0 calc(33.333% - 0.5rem);
+        min-width: 100px;
+    }
+}
+
+.card.week-selector-card {
+    display: flex;
+}
+
+form#weekSelectorForm {
+    margin-left: 1.2rem;
+}
+
+select#yearSelector {
+    padding: 0.8rem 1.2rem;
+    border: 1px solid #e0e7ff;
+    border-radius: 6px;
+    background-color: #fafafa;
+    transition: border-color 0.2s;
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+}
+
+label.block.font-semibold {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    background: -webkit-linear-gradient(#2563eb, #0891b2);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* 移动端按钮优化 */
+@media (max-width: 768px) {
+    /* 调整按钮的内边距和字体大小 */
+    .btn {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+}

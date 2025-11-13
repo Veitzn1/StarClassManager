@@ -1,0 +1,8 @@
+<?php
+session_start();
+
+// 销毁会话
+session_destroy();
+
+// 返回成功信息
+echo json_encode(['success' => true, 'message' => '注销成功']);
